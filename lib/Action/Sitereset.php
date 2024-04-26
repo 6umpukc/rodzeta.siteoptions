@@ -7,6 +7,11 @@ use DirectoryIterator;
 
 final class Sitereset extends Base
 {
+	public function getDescription()
+	{
+		return 'bx sitereset - Очистить сайт (файлы проекта и таблицы БД)';
+	}
+
 	public function run()
 	{
 		if (!$this->confirm('Warning! Site db tables and files will be removed.'))

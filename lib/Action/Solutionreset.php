@@ -16,6 +16,11 @@ use Bitrix\Main\Application;
 
 final class Solutionreset extends Base
 {
+	public function getDescription()
+	{
+		return 'bx solutionreset - Удаляет файлы и таблицы БД решения';
+	}
+
 	public function run()
 	{
 		if (!$this->confirm('Warning! Site public data will be removed.'))

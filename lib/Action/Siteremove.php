@@ -4,6 +4,11 @@ namespace Rodzeta\Siteoptions\Action;
 
 class Siteremove extends Base
 {
+	public function getDescription()
+	{
+		return 'bx siteremove - Удалить сайт (конфиги вебсервера и БД)';
+	}
+
 	public function run()
 	{
 		$dbpassword = $_SERVER['DB_PASSWORD'] ?? '';

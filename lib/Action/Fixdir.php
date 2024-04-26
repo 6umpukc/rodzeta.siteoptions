@@ -4,6 +4,11 @@ namespace Rodzeta\Siteoptions\Action;
 
 final class Fixdir extends Base
 {
+	public function getDescription()
+	{
+		return 'bx fixdir - Поправить права в папке проекта';
+	}
+
 	public function run()
 	{
 		$dirUser = $_SERVER['SITE_DIR_USER'] ?? '';

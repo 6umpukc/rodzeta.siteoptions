@@ -4,6 +4,11 @@ namespace Rodzeta\Siteoptions\Action;
 
 class Siteproxy extends Base
 {
+	public function getDescription()
+	{
+		return 'bx siteproxy [host] - Установить IP для прокси-сайта';
+	}
+
 	public function run()
 	{
 		$destpath = $this->getSiteConfig();

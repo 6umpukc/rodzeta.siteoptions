@@ -4,6 +4,11 @@ namespace Rodzeta\Siteoptions\Action;
 
 final class Sitehosts extends Base
 {
+	public function getDescription()
+	{
+		return 'bx sitehosts - Добавить в /etc/hosts домен проекта';
+	}
+
 	public function run()
 	{
 		$localIp = '127.0.0.1';

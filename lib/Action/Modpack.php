@@ -6,6 +6,11 @@ use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
 final class Modpack extends Base
 {
+	public function getDescription()
+	{
+		return 'bx modpack - Создать архив модуля для маркетплейс (выполнять из папки модуля)';
+	}
+
 	public function run()
 	{
 		$ignoredDirs = [

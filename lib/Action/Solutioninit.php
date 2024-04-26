@@ -4,6 +4,11 @@ namespace Rodzeta\Siteoptions\Action;
 
 final class Solutioninit extends Base
 {
+	public function getDescription()
+	{
+		return 'bx solutioninit - Клонирует список модулей решения';
+	}
+
 	public function run()
 	{
 		/* TODO!!!

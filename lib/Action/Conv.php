@@ -7,6 +7,11 @@ use RecursiveDirectoryIterator;
 
 final class Conv extends Base
 {
+	public function getDescription()
+	{
+		return 'bx conv win|utf - Конвертирует кодировку файлов в текущей директории';
+	}
+
 	public function run()
 	{
 		/* TODO!!!

@@ -4,6 +4,11 @@ namespace Rodzeta\Siteoptions\Action;
 
 class Sitephp extends Base
 {
+	public function getDescription()
+	{
+		return 'bx sitephp [version] - Сменить версию php для проекта';
+	}
+
 	public function run()
 	{
 		$destpath = $this->getSiteConfig();

@@ -4,6 +4,11 @@ namespace Rodzeta\Siteoptions\Action;
 
 final class Modupdate extends Base
 {
+	public function getDescription()
+	{
+		return 'bx modupdate - Обновить версию модуля, cоздать коммит и запушить тег обновления (выполнять из папки модуля)';
+	}
+
 	public function run()
 	{
 		//TODO!!! version param

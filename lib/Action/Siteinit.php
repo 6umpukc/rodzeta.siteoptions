@@ -7,6 +7,11 @@ use RecursiveDirectoryIterator;
 
 final class Siteinit extends Base
 {
+	public function getDescription()
+	{
+		return 'bx siteinit - Создать сайт для проекта (конфиги вебсервера и БД) - выполнять из папки проекта';
+	}
+
 	public function addSite($siteconf)
 	{
 		$publicPath = $this->getPublicPath();

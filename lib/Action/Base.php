@@ -15,6 +15,11 @@ class Base
 		$this->params = $params;
 	}
 
+	public function getDescription()
+	{
+		return '';
+	}
+
 	public function run()
 	{
 	}
