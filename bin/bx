@@ -830,6 +830,8 @@ my %actions = (
 my $action = '';
 if (scalar @ARGV > 0) {
 	$action = $ARGV[0];
+} else {
+	$action = 'help';
 }
 if ($action ne '') {
 	if (exists $actions{$action}) {
@@ -840,6 +842,10 @@ if ($action ne '') {
 		my $args = join(' ', @ARGV);
 		my $cliPath = dirname($RealBin) . '/include.php';
 		$ENV{'DOCUMENT_ROOT'} = $site_root;
+		if ($action eq 'help')
+		{
+			$args = $action;
+		}
 		run "php '$cliPath' '$site_root' $args";
 	}
 }

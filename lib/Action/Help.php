@@ -11,6 +11,7 @@ final class Help extends Base
 
 	public function run()
 	{
+		var_dump($this->getDescription());
 		//...
 	}
 }
