@@ -781,25 +781,61 @@ if ($envPrefix ne '') {
 
 # process commands
 my %actions = (
-	'install' => \&action_install,
-	'php' => \&action_php,
-	'lamp' => \&action_install_lamp,
+	'install' => {
+		'fn' => \&action_install,
+		'descr' => 'bx install - Установка bx в домашней директории пользователя'
+	},
 
-	'env' => \&action_env,
-	'ftp' => \&action_ftp,
-	'ssh' => \&action_ssh,
-	'putty' => \&action_putty,
+	'php' => {
+		'fn' => \&action_php,
+		'descr' => 'bx php [version] - Установка php интерпретатора'
+	},
 
-	'start' => \&action_start,
-	'stop' => \&action_stop,
+	'lamp' => {
+		'fn' => \&action_install_lamp,
+		'descr' => 'bx lamp - Установка LAMP'
+	},
+
+	'env' => {
+		'fn' => \&action_env,
+		'descr' => 'bx env - Вывод переменных окружения по проекту'
+	},
+
+	'ftp' => {
+		'fn' => \&action_ftp,
+		'descr' => 'bx ftp - Подключится по ftp (через filezilla)'
+	},
+
+	'ssh' => {
+		'fn' => \&action_ssh,
+		'descr' => 'bx ssh - Подключится по ssh'
+	},
+
+	'putty' => {
+		'fn' => \&action_putty,
+		'descr' => 'bx putty - Подключится по ssh через putty'
+	},
+
+	'start' => {
+		'fn' => \&action_start,
+		'descr' => 'bx start - Запустить сервисы LAMP'
+	},
+
+	'stop' => {
+		'fn' => \&action_stop,
+		'descr' => 'bx stop - Остановить сервисы LAMP'
+	},
 );
+
 my $action = '';
 if (scalar @ARGV > 0) {
 	$action = $ARGV[0];
 }
 if ($action ne '') {
 	if (exists $actions{$action}) {
-		$actions{$action}->($site_root);
+		my $actionFn = $actions{$action}->{'fn'};
+		my $actionDescr = $actions{$action}->{'descr'};
+		$actionFn->($site_root);
 	} else {
 		my $args = join(' ', @ARGV);
 		my $cliPath = dirname($RealBin) . '/include.php';
