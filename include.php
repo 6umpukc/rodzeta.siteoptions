@@ -77,7 +77,12 @@ function runCli()
 			$class = str_replace(__NAMESPACE__, '', $class);
 			$class = str_replace('\\', '/', $class);
 			$class = trim($class, '\/');
-			require __DIR__ . '/lib/' . $class . '.php';
+
+			$path = __DIR__ . '/lib/' . $class . '.php';
+			if (file_exists($path))
+			{
+				require $path;
+			}
 		});
 		//...
 	}
