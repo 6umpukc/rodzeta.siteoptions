@@ -11,6 +11,7 @@ final class Solutioninit extends Base
 
 	public function run()
 	{
+		throw new \Exception('ACTION NOT IMPLEMENTED...');
 		/* TODO!!!
 
 		var solution = (ARGV.length > 1) ? ARGV[1] : '';
