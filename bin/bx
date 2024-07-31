@@ -21,15 +21,10 @@ sub init_default_env {
 	$ENV{'PHP_URLS_MACOS'} = '';
 	$ENV{'PHP_URLS_LINUX'} = '';
 
-	$ENV{'NODE_URLS_WIN32'} = 'https://nodejs.org/dist/v14.16.0/node-v14.16.0-win-x86.zip';
-	$ENV{'NODE_URLS_WIN64'} = 'https://nodejs.org/dist/v14.16.0/node-v14.16.0-win-x64.zip';
-	$ENV{'NODE_URLS_MACOS'} = 'https://nodejs.org/dist/v14.16.0/node-v14.16.0-darwin-x64.tar.gz';
-	$ENV{'NODE_URLS_LINUX'} = 'https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz';
-
-	$ENV{'NODE_URLS_BITRIX_WIN32'} = 'https://nodejs.org/dist/v9.11.2/node-v9.11.2-win-x86.zip';
-	$ENV{'NODE_URLS_BITRIX_WIN64'} = 'https://nodejs.org/dist/v9.11.2/node-v9.11.2-win-x64.zip';
-	$ENV{'NODE_URLS_BITRIX_MACOS'} = 'https://nodejs.org/dist/v9.11.2/node-v9.11.2-darwin-x64.tar.gz';
-	$ENV{'NODE_URLS_BITRIX_LINUX'} = 'https://nodejs.org/dist/v9.11.2/node-v9.11.2-linux-x64.tar.gz';
+	$ENV{'NODE_URLS_WIN32'} = 'https://nodejs.org/dist/v20.16.0/node-v20.16.0-win-x86.zip';
+	$ENV{'NODE_URLS_WIN64'} = 'https://nodejs.org/dist/v20.16.0/node-v20.16.0-win-x64.zip';
+	$ENV{'NODE_URLS_MACOS'} = 'https://nodejs.org/dist/v20.16.0/node-v20.16.0-darwin-x64.tar.gz';
+	$ENV{'NODE_URLS_LINUX'} = 'https://nodejs.org/dist/v20.16.0/node-v20.16.0-linux-x64.tar.gz';
 
 	$ENV{'BITRIX_SRC_MICRO'} = 'https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz';
 	$ENV{'BITRIX_SRC_CORE'} = 'https://www.1c-bitrix.ru/download/start_encode_php5.tar.gz';
